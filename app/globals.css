@@ -16,12 +16,11 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
-  font-family: var(--font-aboreto);
+  /* This matches the variable we set in Layout.tsx */
+  font-family: var(--font-aboreto), cursive; 
   margin: 0;
   padding: 0;
-  overflow: hidden; /* Prevents scrolling on the main page */
-  height: 100dvh;
-  width: 100vw;
+  -webkit-font-smoothing: antialiased;
 }
 
 @keyframes shine {

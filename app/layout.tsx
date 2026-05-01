@@ -1,18 +1,14 @@
 import type { Metadata, Viewport } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Aboreto } from "next/font/google"; // Import the font directly
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
+// Configure Aboreto
+const aboreto = Aboreto({
+  weight: "400",
   subsets: ["latin"],
+  variable: "--font-aboreto",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
-
-// 1. Set the color of the browser UI and status bar
 export const viewport: Viewport = {
   themeColor: "#0c0c0c",
   width: "device-width",
@@ -21,7 +17,6 @@ export const viewport: Viewport = {
   userScalable: false,
 };
 
-// 2. Updated metadata for better app feel
 export const metadata: Metadata = {
   title: "Sway Soul | Spin the Destiny",
   description: "Consult your soul for the perfect cocktail.",
@@ -39,7 +34,8 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      // Add the font variable to the class list
+      className={`${aboreto.variable} h-full antialiased`}
     >
       <body className="h-full bg-[#0c0c0c]">{children}</body>
     </html>

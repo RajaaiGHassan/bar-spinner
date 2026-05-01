@@ -1,8 +1,6 @@
 @import "tailwindcss";
-
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
-/* Force the Sway Soul Dark Theme regardless of system settings */
 :root {
   --background: #0c0c0c;
   --foreground: #ffffff;
@@ -21,12 +19,11 @@ body {
   font-family: var(--font-aboreto);
   margin: 0;
   padding: 0;
-  /* Smooth out the text for premium look */
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  overflow: hidden; /* Prevents scrolling on the main page */
+  height: 100dvh;
+  width: 100vw;
 }
 
-/* Gold Shimmer Animation from the website */
 @keyframes shine {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }

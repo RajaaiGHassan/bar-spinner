@@ -1,29 +1,33 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
+/* Force the Sway Soul Dark Theme regardless of system settings */
+:root {
+  --background: #0c0c0c;
+  --foreground: #ffffff;
+  --font-aboreto: 'Aboreto', cursive;
+}
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-serif: var(--font-aboreto);
+}
 
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: 'Aboreto', cursive;
+  font-family: var(--font-aboreto);
+  margin: 0;
+  padding: 0;
+  /* Smooth out the text for premium look */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Gold Shimmer Animation from the website */
+@keyframes shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }

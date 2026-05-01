@@ -1,8 +1,19 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
 
 body {
   font-family: 'Aboreto', cursive;
   margin: 0;
   padding: 0;
-  background: #0c0c0c; /* Matches Sway Soul's background */
+  background: #0c0c0c;
+  color: white;
+}
+
+/* This adds the gold shimmer effect for the title */
+@keyframes shine {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
 }
